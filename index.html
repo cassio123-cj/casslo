@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runner JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+
+    <div class="top-bar">
+        <h1>🏃 Runner JS</h1>
+        <div>
+            Pontos: <span id="score">0</span> |
+            Recorde: <span id="best">0</span>
+        </div>
+    </div>
+
+    <div id="game" class="game">
+
+        <div class="sun"></div>
+
+        <div class="cloud cloud1">☁️</div>
+        <div class="cloud cloud2">☁️</div>
+
+        <div id="player" class="player"></div>
+
+        <div id="obstacle" class="obstacle"></div>
+
+        <div id="gameOver" class="game-over">
+            <h2>💥 Game Over!</h2>
+            <p>Pontuação: <span id="finalScore">0</span></p>
+            <button onclick="restartGame()">Jogar novamente</button>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+        <button onclick="jump()">⬆️ Pular</button>
+        <button onclick="startGame()">▶️ Iniciar</button>
+        <button onclick="pauseGame()">⏸️ Pausar</button>
+    </div>
+
+    <p class="instructions">
+        Pressione Espaço ou ↑ para pular.
+    </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

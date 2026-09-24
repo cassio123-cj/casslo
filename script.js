@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    width: 95%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.top-bar {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.top-bar h1 {
+    font-size: 24px;
+}
+
+.game {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: linear-gradient(#60a5fa, #e0f2fe);
+    border-bottom: 8px solid #334155;
+    border-radius: 15px;
+}
+
+.sun {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #facc15;
+    border-radius: 50%;
+    right: 12%;
+    top: 30px;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 40px;
+}
+
+.cloud1 {
+    left: 15%;
+    top: 35px;
+}
+
+.cloud2 {
+    left: 55%;
+    top: 80px;
+}
+
+.player {
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+    width: 45px;
+    height: 55px;
+    background: #2563eb;
+    border-radius: 10px 10px 5px 5px;
+    z-index: 2;
+}
+
+.player::before {
+    content: "🙂";
+    position: absolute;
+    font-size: 28px;
+    top: 5px;
+    left: 8px;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 35px;
+    height: 60px;
+    background: #475569;
+    border-radius: 7px 7px 2px 2px;
+    z-index: 2;
+}
+
+.obstacle::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 8px;
+    background: #475569;
+    left: -10px;
+    bottom: 15px;
+    border-radius: 10px;
+}
+
+.jump {
+    animation: jump 0.65s ease-out;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    45% {
+        bottom: 130px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.game-over {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    z-index: 10;
+}
+
+.game-over.show {
+    display: flex;
+}
+
+.game-over h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.instructions {
+    color: #cbd5e1;
+    margin-top: 15px;
+}
