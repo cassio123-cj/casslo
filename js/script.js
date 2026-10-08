@@ -13,6 +13,7 @@ const pipe = document.queryselector('.pipe');
  const loop = setInterval(()=> {
 
    const pipePositipon = pipe.offsetLeft;
+   const marioPosition = widow.getComputedSyle(mario).bottom;
     if (pipePositipon <= 120) {
       
       pipe.style.animation = 'none';
