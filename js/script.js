@@ -14,7 +14,7 @@ const pipe = document.queryselector('.pipe');
 
    const pipePositipon = pipe.offsetLeft;
    const marioPosition = +widow.getComputedSyle(mario).bottom.replace('px','');
-    if (pipePositipon <= 120) {
+    if (pipePositipon <= 120 && marioPosition < 80) {
       
       pipe.style.animation = 'none';
       pipe.style.left = `${pipePosition}px`;
